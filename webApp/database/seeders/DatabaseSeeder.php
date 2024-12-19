@@ -41,13 +41,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Student::create([
-            'studentFullName' => 'Nguyen Thi Lan',
-            'studentIDNumber' => 'PKA9873',
+            'studentFullName' => 'Nguyen Thi Minh',
+            'studentIDNumber' => 'PKA9833',
         ]);
 
         Student::create([
-            'studentFullName' => 'Nguyen Huu Manh',
-            'studentIDNumber' => 'PKA9883',
+            'studentFullName' => 'Nguyen Van Hung',
+            'studentIDNumber' => 'PKA23883',
+        ]);
+        Student::create([
+            'studentFullName' => 'Tran Van Huy',
+            'studentIDNumber' => 'PKA13883',
         ]);
     }
 }
