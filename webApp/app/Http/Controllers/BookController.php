@@ -9,5 +9,9 @@ class BookController extends Controller{
         $books = Book::all();
         return view('Book', compact('books'));
     }
+    public function sendData(){
+       ///code
+        return view('Book');
+    }
 
 }

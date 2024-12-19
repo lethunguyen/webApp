@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Book;
+use App\Models\Student;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,9 +24,30 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Book::create([
-            'bookID' => 'book3',
-            'title' => 'test programming',
+            'bookID' => 'book30',
+            'title' => 'Mobile programming',
         ]);
-        
+        Book::create([
+            'bookID' => 'book31',
+            'title' => 'Web programming',
+        ]);
+        Book::create([
+            'bookID' => 'book32',
+            'title' => 'Math',
+        ]);
+        Book::create([
+            'bookID' => 'book33',
+            'title' => 'Physics',
+        ]);
+
+        Student::create([
+            'studentFullName' => 'Nguyen Thi Lan',
+            'studentIDNumber' => 'PKA9873',
+        ]);
+
+        Student::create([
+            'studentFullName' => 'Nguyen Huu Manh',
+            'studentIDNumber' => 'PKA9883',
+        ]);
     }
 }
