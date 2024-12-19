@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/book',[BookController::class, 'index'] )->name('book');
+
+//Route::get('/book', 'App\Http\Controllers\BookController@index');
