@@ -55,7 +55,24 @@
      <p>Hello The World </p> 
 
     </div>
-    {{$dataPost}}
+    @foreach($dataPost as $st)
+     
+            <div class="row align-items-end" style="background-color: #e3f2fd; color:green; padding: 6px">
+
+                <div class="col">
+
+                    {{ $st}}
+
+                </div>
+               
+
+
+
+                
+            </div>
+            <div class="row " style="background-color: white; "></div>
+    @endforeach
+        </div>
    
 
 </body>
