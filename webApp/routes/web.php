@@ -25,3 +25,6 @@ Route::post('/book',[BookController::class, 'sendData']);
 //Route::get('/book', 'App\Http\Controllers\BookController@index');
 
 Route::get('/student', 'App\Http\Controllers\StudentController@listStudent');
+//Route::get('/edit',[EditController::class, 'index']);
+
+Route::post('/edit', 'App\Http\Controllers\EditController@index')->name('edit');

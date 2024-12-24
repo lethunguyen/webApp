@@ -9,9 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
 
 
 </head>
@@ -26,23 +25,22 @@
             </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
     </div>
 
-
-
-
-
     <div class="container">
 
 
-        <form>
+    <form action="/edit" method="POST">
+    @csrf
             <div class="row align-items-start">
                 <div class=".col-md-6">
-                    <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-1" type="search" id="search" name ="search" placeholder="Search" aria-label="Search">
                 </div>
                 <div class=".col-md-6">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -51,49 +49,47 @@
         </form>
     </div>
     <div class="row align-items-start" style="background-color: green; color :white">
-    <div class="col" >
-           
+
+        <div class="col">
+
         </div>
-        <div class="col" >
+        <div class="col">
             Fullname
         </div>
         <div class="col">
-           Student ID
+            Student ID
         </div>
-        
-        
-        
+
     </div>
+    <form action="{{route('edit')}}" method="post">
     @foreach($students as $st)
-    
+     
+            <div class="row align-items-end" style="background-color: #e3f2fd; color:green; padding: 6px">
 
-    <div class="row align-items-end" style="background-color: #e3f2fd; color:green; padding: 6px">
-    <div class="col" >
-          
-        </div>    
-    <div class="col">
+                <div class="col">
 
-            {{ $st->studentFullName}}
+                    {{ $st->studentFullName}}
 
-        </div>
-        <div class="col">
+                </div>
+                <div class="col">
 
-            {{ $st->studentIDNumber}}
+                    {{ $st->studentIDNumber}}
 
-        </div>
-        
-        
-      
-        <div class="col" >
-        <button type="button" class="btn btn-success">Edit</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+                </div>
 
 
-        </div>
-    </div>
-    <div class="row " style="background-color: white; "></div>
+
+                <div class="col">
+                    <button type="button" class="btn btn-success">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+
+
+                </div>
+            </div>
+            <div class="row " style="background-color: white; "></div>
     @endforeach
-    </div>
+        </div>
+    </form>
 
 </body>
 
