@@ -27,6 +27,7 @@ class EditDeleteStudentController extends Controller
     public function editStudent(Request $request)
     {
         $id = $request->id;
+        
         $student = Student::findOrFail($id);
         
        

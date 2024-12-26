@@ -12,10 +12,11 @@ class SaveStudentController extends Controller
     public function index(Request $request){
 
         $id = $request->input("id");
+        
         $studentFullName= $request->input("studentFullName");
         $studentIDNumber= $request->input("studentIDNumber");
  
-        Student::where('studentIDNumber',$studentIDNumber)->update(["studentFullName"=> $studentFullName,"studentIDNumber"=> $studentIDNumber]);
+        Student::where('id',$id)->update(["studentFullName"=> $studentFullName,"studentIDNumber"=> $studentIDNumber]);
         $students = Student::all();
 
         return view('Student', compact('students'));
