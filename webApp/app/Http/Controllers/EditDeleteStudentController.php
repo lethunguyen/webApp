@@ -11,15 +11,14 @@ use Illuminate\Support\Facades\Log;
 class EditDeleteStudentController extends Controller
 {
     public function optStudent(Request $request){
-   // $student = Student::findOrFail($request->id);
-     $test = $request->post();
-  
-   // print($student);
-    //$student->delete();
-   // Log::info($test);
-    Log::info($request);
+        //to do: request->id
+       
+    $id = $request->id;
+    
+    $student = Student::findOrFail( $id );
+    $student->delete();
    
-    $students = Student::all();
+    $test = Student::all();
     return view('delete', compact('test'));
     }
 }

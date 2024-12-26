@@ -36,11 +36,12 @@
     <div class="container">
 
 
-    <form action="/edit" method="POST">
-    @csrf
+        <form action="/edit" method="POST">
+            @csrf
             <div class="row align-items-start">
                 <div class=".col-md-6">
-                    <input class="form-control mr-sm-1" type="search" id="search" name ="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-1" type="search" id="search" name="search" placeholder="Search"
+                        aria-label="Search">
                 </div>
                 <div class=".col-md-6">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -50,7 +51,7 @@
     </div>
     <div class="row align-items-start" style="background-color: green; color :white">
 
-      
+
         <div class="col">
             Fullname
         </div>
@@ -61,15 +62,16 @@
             ID
         </div>
         <div class="col">
-           
+
         </div>
 
 
     </div>
-    <form action="/editDeleteStudent" method="POST">
-    @csrf
-    @foreach($students as $st)
-     
+
+        <form action="/editDeleteStudent" method="POST">
+        @csrf
+         
+        @foreach($students as $st)
             <div class="row align-items-end" style="background-color: #e3f2fd; color:green; padding: 6px">
 
                 <div class="col">
@@ -84,24 +86,28 @@
                 </div>
                 <div class="col">
 
-{{ $st->id}}
+                    {{ $st->id}}
 
-</div>
+                </div>
 
 
 
 
                 <div class="col">
                     <button class="btn btn-success">Edit</button>
-                    <button class="btn btn-danger" type ="submit">Delete</button>
+                 
+                    <a href="{{ url('/editDeleteStudent/{$st->id}') }}">Delete</a>
+                    <a href="{{route('delete', $st->id)}}">Delete2</a>
 
 
                 </div>
             </div>
             <div class="row " style="background-color: white; "></div>
-    @endforeach
+           
+            @endforeach
+            </form>
         </div>
-    </form>
+   
 
 </body>
 
