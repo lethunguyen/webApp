@@ -19,6 +19,7 @@ Route::post('/book',[BookController::class, 'sendData']);
 
 Route::get('/student', 'App\Http\Controllers\StudentController@listStudent');
 
+Route::get('/studentNew', 'App\Http\Controllers\StudentController@createStudent');
 Route::get('/bookDisplay',[BookController::class, 'index'] )->name('book');
 
 
@@ -38,5 +39,5 @@ Route::get('/getEditStudent/{id}', 'App\Http\Controllers\EditDeleteStudentContro
 Route::get('/usertest', 'App\Http\Controllers\UserController@index');
 
 Route::post('/saveStudent', 'App\Http\Controllers\SaveStudentController@index')->name('saveStudent');
-
+Route::post('/saveStudentNew', 'App\Http\Controllers\SaveStudentController@saveNewStudent')->name('saveStudentNew');
 Route::get('/test', [testController::class,'index'] );

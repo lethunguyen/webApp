@@ -21,5 +21,15 @@ class SaveStudentController extends Controller
 
         return view('Student', compact('students'));
     }
+
+    public function saveNewStudent(Request $request){
+        $studentFullName= $request->input("studentFullName");
+        $studentIDNumber= $request->input("studentIDNumber");
+        Student::create(["studentFullName"=> $studentFullName,"studentIDNumber"=> $studentIDNumber]);
+        $students = Student::all();
+
+        return view('Student', compact('students'));
+
 }
 
+}
