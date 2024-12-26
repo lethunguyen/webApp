@@ -2,6 +2,6 @@
 
 
 <body>
-    <p>Hello</p>
+    <p>Hello {{$ten}}</p>
 </body>
 </html>

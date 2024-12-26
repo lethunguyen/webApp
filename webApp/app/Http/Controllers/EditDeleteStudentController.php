@@ -28,8 +28,8 @@ class EditDeleteStudentController extends Controller
         $id = $request->id;
         $student = Student::findOrFail($id);
         
-        $students = Student::all();
-        return view('Student', compact('students'));
+       
+        return view('StudentEdit', compact('student'));
 
 
     }
