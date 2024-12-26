@@ -50,18 +50,24 @@
     </div>
     <div class="row align-items-start" style="background-color: green; color :white">
 
-        <div class="col">
-
-        </div>
+      
         <div class="col">
             Fullname
         </div>
         <div class="col">
             Student ID
         </div>
+        <div class="col">
+            ID
+        </div>
+        <div class="col">
+           
+        </div>
+
 
     </div>
-    <form action="{{route('edit')}}" method="post">
+    <form action="/editDeleteStudent" method="POST">
+    @csrf
     @foreach($students as $st)
      
             <div class="row align-items-end" style="background-color: #e3f2fd; color:green; padding: 6px">
@@ -76,12 +82,18 @@
                     {{ $st->studentIDNumber}}
 
                 </div>
+                <div class="col">
+
+{{ $st->id}}
+
+</div>
+
 
 
 
                 <div class="col">
-                    <button type="button" class="btn btn-success">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button class="btn btn-success">Edit</button>
+                    <button class="btn btn-danger" type ="submit">Delete</button>
 
 
                 </div>
