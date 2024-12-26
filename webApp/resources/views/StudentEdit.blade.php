@@ -64,14 +64,15 @@
         <div class="row align-items-start" style="background-color: green; color :white">
 
 
-            <div class="col">
-                Fullname
-            </div>
+
             <div class="col">
                 Student ID
             </div>
             <div class="col">
-                
+                Fullname
+            </div>
+            <div class="col">
+
             </div>
             <div class="col">
 
@@ -85,8 +86,8 @@
         <div class="row align-items-end" style="background-color: #e3f2fd; color:green; padding: 6px">
 
             <div class="col">
-                <input class="form-control mr-sm-1" type="search" id="studentIDNumber" name="studentIDNumber" placeholder="Student ID"
-                    aria-label="StudentID" value={{$student->studentIDNumber}}>
+                <input class="form-control mr-sm-1" type="search" id="studentIDNumber" name="studentIDNumber"
+                    placeholder="Student ID" aria-label="StudentID" value={{$student->studentIDNumber}}>
 
 
 
@@ -97,8 +98,8 @@
 
             </div>
             <div class="col">
-                <input class="form-control mr-sm-1"  id="id" name="id" placeholder="id" aria-label="id"
-                    type="hidden" value={{ $student->id}}>
+                <input class="form-control mr-sm-1" id="id" name="id" placeholder="id" aria-label="id" type="hidden"
+                    value={{ $student->id}}>
 
             </div>
 
