@@ -31,3 +31,6 @@ Route::get('/student', 'App\Http\Controllers\StudentController@listStudent');
 Route::post('/edit', 'App\Http\Controllers\EditController@index')->name('edit');
 
 Route::post('/editDeleteStudent/{id}', 'App\Http\Controllers\EditController@optStudent')->name('delete');
+
+
+Route::get('/usertest', 'App\Http\Controllers\UserController@index');
