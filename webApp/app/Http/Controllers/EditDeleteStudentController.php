@@ -23,9 +23,11 @@ class EditDeleteStudentController extends Controller
         return view('Student', compact('students'));
     }
 
-    public function editStudent(Request $request, $id)
+    public function editStudent(Request $request)
     {
-
+        $id = $request->id;
+        $student = Student::findOrFail($id);
+        
         $students = Student::all();
         return view('Student', compact('students'));
 

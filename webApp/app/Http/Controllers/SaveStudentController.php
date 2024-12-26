@@ -13,3 +13,4 @@ class SaveStudentController extends Controller
         return view('Student', compact('students'));
     }
 }
+
