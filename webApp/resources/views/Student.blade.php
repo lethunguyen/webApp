@@ -96,8 +96,7 @@
                 <div class="col">
                     <button class="btn btn-success">Edit</button>
                  
-                    <a href="{{ url('/editDeleteStudent/{$st->id}') }}">Delete</a>
-                    <a href="{{route('getDelete', $st->id)}}">Delete2</a>
+                    <button class="btn btn-warning"><a href="{{route('getDelete', $st->id)}}">Delete</a></button>
 
 
                 </div>
