@@ -71,7 +71,7 @@
                 Student ID
             </div>
             <div class="col">
-                ID
+                
             </div>
             <div class="col">
 
@@ -97,7 +97,7 @@
 
             </div>
             <div class="col">
-                <input class="form-control mr-sm-1" type="search" id="id" name="id" placeholder="id" aria-label="id"
+                <input class="form-control mr-sm-1"  id="id" name="id" placeholder="id" aria-label="id"
                     type="hidden" value={{ $student->id}}>
 
             </div>

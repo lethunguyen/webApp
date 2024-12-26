@@ -15,9 +15,9 @@ class SaveStudentController extends Controller
         $studentFullName= $request->input("studentFullName");
         $studentIDNumber= $request->input("studentIDNumber");
  
-        Student::where(column:'id', $id)->update(["studentFullName"=> $studentFullName,"studentIDNumber"=> $studentIDNumber]);
-        $student = Student::all();
-        
+        Student::where('studentIDNumber',$studentIDNumber)->update(["studentFullName"=> $studentFullName,"studentIDNumber"=> $studentIDNumber]);
+        $students = Student::all();
+
         return view('Student', compact('students'));
     }
 }
