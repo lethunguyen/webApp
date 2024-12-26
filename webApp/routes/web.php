@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EditDeleteStudentController;
+use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 
@@ -31,9 +32,11 @@ Route::get('/student', 'App\Http\Controllers\StudentController@listStudent');
 Route::post('/edit', 'App\Http\Controllers\EditController@index')->name('edit');
 
 Route::post('/editDeleteStudent/{id}', 'App\Http\Controllers\EditDeleteStudentController@optStudent')->name('delete');
-Route::get('/editDeleteStudent/{id}', 'App\Http\Controllers\EditDeleteStudentController@optStudent')->name('getDelete');
+Route::get('/editDeleteStudent/{id}', [EditDeleteStudentController::class, 'optStudent'])->name('getDelete');
 
 Route::get('/getEditStudent/{id}', 'App\Http\Controllers\EditDeleteStudentController@editStudent')->name('getEdit');
 Route::get('/usertest', 'App\Http\Controllers\UserController@index');
 
 Route::post('/saveStudent', 'App\Http\Controllers\SaveStudentController@index')->name('saveStudent');
+
+Route::get('/test', [testController::class,'index'] );

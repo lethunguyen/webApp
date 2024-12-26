@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Test;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Student;
@@ -52,6 +53,12 @@ class DatabaseSeeder extends Seeder
         Student::create([
             'studentFullName' => 'Tran Van Huy',
             'studentIDNumber' => 'PKA13883',
+        ]);
+
+        Test::create([
+            'test1'=>'Nguyen',
+            'test2'=>'Le',
+            'test3' =>'thu',
         ]);
     }
 }

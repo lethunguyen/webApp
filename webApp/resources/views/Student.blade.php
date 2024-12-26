@@ -97,7 +97,7 @@
                     
                     <button class="btn btn-warning"><a href="{{route('getEdit', $st->id)}}">Edit</a></button>
                  
-                    <button class="btn btn-warning"><a href="{{route('getDelete', $st->id)}}">Delete</a></button>
+                    <button class="btn btn-warning"><a href="{{url('/editDeleteStudent', $st->id)}}">Delete</a></button>
 
 
                 </div>
