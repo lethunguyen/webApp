@@ -105,6 +105,9 @@
             @endforeach
             </form>
         </div>
+        <div>
+        <button class="btn btn-outline-success my-2 my-sm-0"><a href="{{ url('https://expert-giggle-jjrw5vw67xx6cqp96-8000.app.github.dev/studentNew/') }}">Create </a></button>
+        </div>
    
 
 </body>
