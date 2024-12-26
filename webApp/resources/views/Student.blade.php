@@ -95,12 +95,13 @@
 
                 <div class="col">
                     
-                    <button class="btn btn-warning"><a href="{{route('getEdit', $st->id)}}">Edit</a></button>
+                    <button class="btn btn-warning"><a href="{{url('https://expert-giggle-jjrw5vw67xx6cqp96-8000.app.github.dev/getEditStudent/'.$st->id) }}">Edit</a></button>
+
                  
-                    <button class="btn btn-warning"><a href="{{ route('getDelete',  ['id'=>$st->id]) }}">Delete</a></button>
+                 
+                    <button class="btn btn-warning"><a href="{{ url('https://expert-giggle-jjrw5vw67xx6cqp96-8000.app.github.dev/getDeleteStudent/'.$st->id) }}">Delete</a></button>
                     
-
-
+                    
 
                 </div>
             </div>

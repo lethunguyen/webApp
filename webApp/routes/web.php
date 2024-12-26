@@ -32,7 +32,7 @@ Route::get('/student', 'App\Http\Controllers\StudentController@listStudent');
 Route::post('/edit', 'App\Http\Controllers\EditController@index')->name('edit');
 
 Route::post('/editDeleteStudent/{id}', 'App\Http\Controllers\EditDeleteStudentController@optStudent')->name('delete');
-Route::get('/editDeleteStudent/{id}', [EditDeleteStudentController::class, 'optStudent'])->name('getDelete');
+Route::get('/getDeleteStudent/{id}', [EditDeleteStudentController::class, 'optStudent'])->name('getDelete');
 
 Route::get('/getEditStudent/{id}', 'App\Http\Controllers\EditDeleteStudentController@editStudent')->name('getEdit');
 Route::get('/usertest', 'App\Http\Controllers\UserController@index');

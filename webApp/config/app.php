@@ -52,7 +52,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://expert-giggle-jjrw5vw67xx6cqp96-8000.app.github.dev/'),
+    'base_url' => env('APP_BASE_URL', 'https://expert-giggle-jjrw5vw67xx6cqp96-8000.app.github.dev/'),
 
     /*
     |--------------------------------------------------------------------------

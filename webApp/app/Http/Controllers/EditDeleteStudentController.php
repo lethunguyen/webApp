@@ -13,6 +13,7 @@ class EditDeleteStudentController extends Controller
     public function optStudent(Request $request)
     {
         //to do: request->id
+       
 
         $id = $request->id;
 
