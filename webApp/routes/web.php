@@ -25,7 +25,7 @@ Route::get('/bookDisplay',[BookController::class, 'index'] )->name('book');
 
 Route::post('/book',[BookController::class, 'sendData']);
 
-//Route::get('/book', 'App\Http\Controllers\BookController@index');
+Route::get('/db', 'App\Http\Controllers\DBController@index');
 
 Route::get('/student', 'App\Http\Controllers\StudentController@listStudent');
 //Route::get('/edit',[EditController::class, 'index']);
